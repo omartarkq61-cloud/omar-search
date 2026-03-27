@@ -10,7 +10,24 @@
         .search-box { width: 100%; padding: 18px; border-radius: 15px; border: none; font-size: 18px; margin-top: 20px; outline: none; }
         .btn-launch { background: #38bdf8; color: #0f172a; border: none; padding: 15px 40px; border-radius: 15px; font-size: 20px; font-weight: bold; cursor: pointer; margin-top: 20px; width: 100%; transition: 0.3s; }
         .btn-launch:hover { background: #7dd3fc; transform: translateY(-3px); }
-        .ad-space { margin-top: 30px; padding: 10px; border: 1px dashed #475569; color: #94a3b8; font-size: 12px; }
+        .ad-space { margin-top: 30px; padding: 10px; border: 1px dashed #475569; color: #94a3b8; font-size: <button onclick="shareSite()" style="margin-top: 15px; background-color: #25d366; color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold;">
+    انشر الموقع لأصدقائك 🚀
+</button>
+
+<script>
+function shareSite() {
+    const shareData = {
+        title: 'Omar Search',
+        text: 'جرب محرك بحث عمر العالمي الجديد!',
+        url: window.location.href
+    }
+    if (navigator.share) {
+        navigator.share(shareData)
+    } else {
+        alert('انسخ الرابط وانشره: ' + window.location.href);
+    }
+}
+</script>
     </style>
 </head>
 <body>
