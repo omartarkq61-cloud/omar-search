@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -9,52 +7,67 @@
         body { margin: 0; padding: 0; background: #000; overflow: hidden; font-family: 'Courier New', Courier, monospace; }
         canvas { display: block; position: fixed; top: 0; left: 0; z-index: 1; }
         .secure-layer { position: relative; top: 50vh; left: 50vw; transform: translate(-50%, -50%); width: 85%; max-width: 450px; background: rgba(0, 15, 0, 0.95); border: 2px solid #0f0; border-radius: 20px; padding: 35px; text-align: center; box-shadow: 0 0 40px #0f0; color: #0f0; z-index: 10; }
-        .logo-secure { font-size: 35px; font-weight: bold; text-shadow: 0 0 15px #0f0; margin-bottom: 15px; letter-spacing: 3px; }
-        .input-box { width: 90%; padding: 15px; background: #000; border: 1px solid #0f0; color: #0f0; border-radius: 10px; font-size: 18px; outline: none; margin-bottom: 20px; text-align: center; box-shadow: inset 0 0 10px #030; }
-        .btn-secure { background: #0f0; color: #000; border: none; padding: 15px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; transition: 0.3s; }
-        .btn-secure:hover { background: #003300; color: #0f0; box-shadow: 0 0 25px #0f0; }
-        .footer-info { margin-top: 25px; font-size: 11px; color: #0f0; border-top: 1px solid #030; padding-top: 15px; }
+        .logo-secure { font-size: 30px; font-weight: bold; text-shadow: 0 0 15px #0f0; margin-bottom: 15px; }
+        .input-box { width: 90%; padding: 15px; background: #000; border: 1px solid #0f0; color: #0f0; border-radius: 10px; font-size: 18px; margin-bottom: 20px; text-align: center; }
+        .btn-secure { background: #0f0; color: #000; border: none; padding: 15px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; }
+        #bank-account { color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 15px auto; font-weight: bold; }
+        .footer-info { margin-top: 20px; font-size: 11px; color: #0f0; opacity: 0.7; }
     </style>
 </head>
 <body>
-<canvas id="matrix"></canva<div class="se <p>محرك البحث العالمي المشفّر</p<div id="bank-account" style="color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 10px auto; width: fit-content; font-weight: bold;"></div>action="https://www.google.com/search" method="GET" target="_blank"<div id="bank-account" style="color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 10px auto; width: 80%; font-weight: bold; text-align: center;">
-    💰 الرصيد الحالي: $<span id="balance-amount">0.00</span>
-</div>
-    
-    <div class="footer-info">
-        نظام حماية عمر الفائق (v2.0) | حقوق المبرمج محفوظة
+    <canvas id="matrix"></canvas>
+
+    <div class="secure-layer">
+        <div class="logo-secure">OMAR ENCRYPTED</div>
+        <p>محرك البحث العالمي المشفّر</p>
+
+        <div id="bank-account">
+            💰 الرصيد الحالي: $<span id="balance-amount">0.00</span>
+        </div>
+
+        <form action="https://www.google.com/search" method="GET" target="_blank" id="search-form">
+            <input type="text" name="q" class="input-box" placeholder="أدخل شفرة البحث هنا..." required>
+            <button type="submit" class="btn-secure">تأكيد البحث الآمن</button>
+        </form>
+
+        <div class="footer-info">
+            نظام حماية عمر الفائق (v2.0) | حقوق المبرمج محفوظة
+        </div>
     </div>
-</div>
-<script>
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const chars = "OMAR10101010SECURITYSEARCH01";
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = [];
-    for (let x = 0; x < columns; x++) drops[x] = 1;
-    function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#0f0"; ctx.font = fontSize + "px arial";
-        for (let i = 0; i < drops.length; i++) {
-            const text = chars.charAt(Math.floor(Math.random() * chars.length));
-            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-            drops[i]++;
+
+    <script>
+        // نظام المصفوفة المتحركة (Matrix)
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const chars = "OMAR10101010SECURITYSEARCH01";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        for (let x = 0; x < columns; x++) drops[x] = 1;
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#0f0";
+            ctx.font = fontSize + "px arial";
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
         }
-    }
-    setInterval(draw, 33);
-</script>
-</body><script>
-document.querySelector('form').onsubmit = function() {
-    let balanceElement = document.getElementById('balance-amount');
-    let currentBalance = parseFloat(balanceElement.innerText);
-    currentBalance += 0.05; // سيزيد الرصيد مع كل ضغطة بحث
-    balanceElement.innerText = currentBalance.toFixed(2);
-};
-</script>
-    
+        setInterval(draw, 33);
+
+        // نظام زيادة الأرباح عند البحث
+        document.getElementById('search-form').onsubmit = function() {
+            let balanceElement = document.getElementById('balance-amount');
+            let currentBalance = parseFloat(balanceElement.innerText);
+            currentBalance += 0.05; 
+            balanceElement.innerText = currentBalance.toFixed(2);
+        };
+    </script>
+</body>
 </html>
