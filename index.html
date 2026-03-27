@@ -1,42 +1,29 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>Omar Search</title>
-<style>
-body {
-    text-align: center;
-    font-family: Arial;
-    margin-top: 150px;
-    background-color: #f2f2f2;
-}
-h1 {
-    font-size: 50px;
-}
-input {
-    width: 500px;
-    padding: 12px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    background-color: #4285F4;
-    color: white;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Omar World Search | محرك بحث عمر العالمي</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background: #0f172a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .app-card { background: #1e293b; padding: 50px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); text-align: center; border: 1px solid #334155; width: 90%; max-width: 600px; }
+        .logo { font-size: 50px; font-weight: bold; margin-bottom: 10px; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .search-box { width: 100%; padding: 18px; border-radius: 15px; border: none; font-size: 18px; margin-top: 20px; outline: none; }
+        .btn-launch { background: #38bdf8; color: #0f172a; border: none; padding: 15px 40px; border-radius: 15px; font-size: 20px; font-weight: bold; cursor: pointer; margin-top: 20px; width: 100%; transition: 0.3s; }
+        .btn-launch:hover { background: #7dd3fc; transform: translateY(-3px); }
+        .ad-space { margin-top: 30px; padding: 10px; border: 1px dashed #475569; color: #94a3b8; font-size: 12px; }
+    </style>
 </head>
 <body>
+    <div class="app-card">
+        <div class="logo">OMAR SEARCH</div>
+        <p>محرك البحث العالمي المخصص للمبرمج عمر</p>
+        
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+            <input type="text" name="q" class="search-box" placeholder="ابحث في العالم من هنا..." required>
+            <button type="submit" class="btn-launch">إطلاق البحث</button>
+        </form>
 
-<h1>🔍 Omar Search</h1>
-
-<form action="https://www.google.com/search">
-    <input type="text" name="q" placeholder="ابحث في الانترنت...">
-    <br><br>
-    <button type="submit">بحث</button>
-</form>
-
+        <div class="ad-space">مساحة إعلانية مخصصة (تحت التطوير لجلب الأرباح)</div>
+    </div>
 </body>
-</html
+</html>
