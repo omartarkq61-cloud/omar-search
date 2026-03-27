@@ -17,16 +17,10 @@
     </style>
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="secure-layer">
-    <div class="logo-secure">OMAR ENCRYPTED</div>
-    <p>محرك البحث العالمي المشفّر</p<div id="bank-account" style="color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 10px auto; width: fit-content; font-weight: bold;">
-    💰 الرصيد الحالي: $0.00
+<canvas id="matrix"></canva<div class="se <p>محرك البحث العالمي المشفّر</p<div id="bank-account" style="color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 10px auto; width: fit-content; font-weight: bold;"></div>action="https://www.google.com/search" method="GET" target="_blank"<div id="bank-account" style="color: #ffd700; background: rgba(255, 215, 0, 0.1); border: 1px solid #ffd700; padding: 10px; border-radius: 10px; margin: 10px auto; width: 80%; font-weight: bold; text-align: center;">
+    💰 الرصيد الحالي: $<span id="balance-amount">0.00</span>
 </div>
-    <form action="https://www.google.com/search" method="GET" target="_blank">
-        <input type="text" name="q" class="input-box" placeholder="أدخل شفرة البحث..." required autocomplete="off">
-        <button type="submit" class="btn-secure">تأكيد البحث الآمن</button>
-    </form>
+    
     <div class="footer-info">
         نظام حماية عمر الفائق (v2.0) | حقوق المبرمج محفوظة
     </div>
@@ -54,5 +48,13 @@
     }
     setInterval(draw, 33);
 </script>
-</body>
+</body><script>
+document.querySelector('form').onsubmit = function() {
+    let balanceElement = document.getElementById('balance-amount');
+    let currentBalance = parseFloat(balanceElement.innerText);
+    currentBalance += 0.05; // سيزيد الرصيد مع كل ضغطة بحث
+    balanceElement.innerText = currentBalance.toFixed(2);
+};
+</script>
+    
 </html>
