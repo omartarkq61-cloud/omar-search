@@ -2,59 +2,59 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>OMAR SECURE SYSTEM | نظام عمر المحصن</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OMAR PLATFORM | ابحث في برش</title>
     <style>
-        /* الخلفية بيضاء وبسيطة */
-        body { margin: 0; padding: 0; background: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { margin: 0; padding: 0; background: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; overflow-x: hidden; }
+        .wrapper { display: flex; flex-direction: column; align-items: center; padding-top: 15vh; height: 100vh; }
         
-        /* حاوية الموقع في المنتصف */
-        .secure-layer { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; max-width: 500px; background: #fff; border: 3px solid #000; border-radius: 25px; padding: 30px; text-align: center; box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); color: #000; }
+        /* شعار عمر العلوي (بديل لجوجل) */
+        .main-logo { font-size: 55px; font-weight: bold; color: #000; letter-spacing: -2px; margin-bottom: 25px; text-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+        .main-logo span { color: #ffd700; } /* حرف ذهبي للزينة */
+
+        /* شريط البحث (نسخة من جوجل) */
+        .search-container { position: relative; width: 90%; max-width: 584px; margin-bottom: 30px; }
+        .search-icon { position: absolute; left: 15px; top: 12px; color: #9aa0a6; font-size: 20px; }
+        .search-input { width: 100%; padding: 15px 15px 15px 50px; border: 1px id #dfe1e5; border-radius: 24px; font-size: 18px; color: #202124; outline: none; box-sizing: border-box; }
+        .search-input:hover, .search-input:focus { box-shadow: 0 1px 6px rgba(32,33,36,0.28); border-color: rgba(223,225,229,0); }
         
-        /* شعار عمر بالأسود */
-        .logo-secure { font-size: 32px; font-weight: bold; margin-bottom: 20px; color: #000; letter-spacing: 1px; }
+        /* زر البحث لزيادة الأرباح */
+        .search-btn { background: #0f0; color: #000; border: none; padding: 12px 25px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 18px; margin-top: 15px; width: 90%; }
         
-        /* مربع البحث بوضوح تام */
-        .input-box { width: 90%; padding: 18px; background: #f5f5f5; border: 2px solid #ccc; color: #000; border-radius: 12px; font-size: 19px; margin-bottom: 25px; text-align: center; outline: none; }
-        .input-box:focus { border-color: #0f0; background: #fff; }
+        /* عداد الأرباح الذهبي */
+        #balance-account { color: #ffd700; background: rgba(0, 0, 0, 0.85); border: 2px solid #ffd700; padding: 10px; border-radius: 12px; font-weight: bold; margin-bottom: 30px; width: 80%; text-align: center; }
+
+        /* الاختصارات (نسخة من الصورة) */
+        .shortcuts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; width: 90%; max-width: 584px; margin-bottom: 40px; }
+        .shortcut-item { text-align: center; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #3c4043; font-size: 12px; }
+        .icon { width: 48px; height: 48px; border-radius: 50%; background: #f8f9fa; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; font-weight: bold; font-size: 18px; color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         
-        /* زر البحث الأخضر */
-        .btn-secure { background: #0f0; color: #000; border: none; padding: 18px; border-radius: 12px; font-weight: bold; cursor: pointer; width: 100%; font-size: 19px; }
-        .btn-secure:hover { background: #0c0; color: #fff; box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); }
+        /* قسم البورصة والمقترحات */
+        .bottom-section { width: 90%; max-width: 584px; margin-top: auto; padding-bottom: 30px; border-top: 1px solid #f2f2f2; padding-top: 20px; }
+        .stock-section { background: #f8f9fa; border-radius: 15px; padding: 15px; margin-bottom: 15px; border-right: 5px solid #ffd700; }
+        .stock-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 14px; }
+        .stock-row span.green { color: green; font-weight: bold; }
         
-        /* عداد الأرباح الذهبي (الأصلي) */
-        #bank-account { color: #ffd700; background: rgba(0, 0, 0, 0.8); border: 2px solid #ffd700; padding: 12px; border-radius: 15px; margin: 15px auto; font-weight: bold; font-size: 18px; }
+        .suggestion-card { background: #f8f9fa; border-radius: 15px; padding: 15px; display: flex; align-items: center; gap: 15px; }
+        .suggestion-card img { width: 70px; height: 70px; border-radius: 10px; object-fit: cover; }
         
-        /* معلومات الأسفل */
-        .footer-info { margin-top: 25px; font-size: 12px; color: #666; opacity: 0.8; }
     </style>
 </head>
 <body>
-    <div class="secure-layer">
-        <div class="logo-secure">OMAR ENCRYPTED</div>
-        <p style="color: #333;">محرك البحث العالمي المشفّر</p>
 
-        <div id="bank-account">
-            💰 الرصيد الحالي: $<span id="balance-amount">0.00</span>
-        </div>
+<div class="wrapper">
+    <div class="main-logo">OMAR <span>P</span></div>
 
+    <div id="balance-account">💰 محفظتك الذهبية: $<span id="balance-amount">0.20</span></div>
+
+    <div class="search-container">
+        <span class="search-icon">🔍</span>
         <form action="https://www.google.com/search" method="GET" target="_blank" id="search-form">
-            <input type="text" name="q" class="input-box" placeholder="أدخل شفرة البحث هنا..." required>
-            <button type="submit" class="btn-secure">تأكيد البحث الآمن</button>
+            <input type="text" name="q" class="search-input" placeholder="ابحث في برش" required>
+            <button type="submit" class="search-btn">تأكيد البحث والربح</button>
         </form>
-
-        <div class="footer-info">
-            نظام حماية عمر الفائق (v2.1) | حقوق المبرمج محفوظة
-        </div>
     </div>
 
-    <script>
-        // نظام زيادة الأرباح عند البحث
-        document.getElementById('search-form').onsubmit = function() {
-            let balanceElement = document.getElementById('balance-amount');
-            let currentBalance = parseFloat(balanceElement.innerText);
-            currentBalance += 0.05; // سيزيد الرصيد مع كل بحث
-            balanceElement.innerText = currentBalance.toFixed(2);
-        };
-    </script>
-</body>
-</html>
+    <div class="shortcuts">
+        <a href="https://www.youtube.com" class="shortcut-item">
+            <div class="icon" styl
