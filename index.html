@@ -180,6 +180,12 @@
         document.getElementById('search-form').onsubmit = function() {
             let balanceElement = document.getElementById('balance-amount');
             let currentBalance = parseFloat(balanceElement.innerText);
+
+<div style="margin: 20px auto; text-align: center; padding: 15px; background: #202124; border-radius: 20px; width: 85%; max-width: 400px; border: 2px solid #ffd700; color: white; font-family: sans-serif;">
+    <p style="margin: 0 0 10px 0; font-weight: bold; color: #ffd700;">🌍 GLOBAL VISITORS / زوارنا حول العالم</p>
+    <img src="https://counter9.optistats.ovh/private/freecounterstat.php?c=8l8n8u3u4u8u1u2u3u4u5u6u7u8u9u0u" border="0" title="Visitor Counter" alt="Visitor Counter">
+    <p style="margin: 10px 0 0 0; font-size: 12px; color: #aaa;">منصة OMAR P مشفرة وآمنة بنسبة 100%</p>
+</div>
             currentBalance += 0.05; 
             balanceElement.innerText = currentBalance.toFixed(2);
         };
